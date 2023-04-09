@@ -7,7 +7,7 @@ function App() {
   let eventSource = undefined;
 
   useEffect(() => {
-    eventSource = registerSSE("https://tdshop.herokuapp.com/api/v1/order/register-client");
+    eventSource = registerSSE("https://tdshop.herokuapp.com/api/v1/order/register-client/4");
     return () => {
       eventSource.close();
       console.log("event closed")
@@ -23,7 +23,7 @@ function App() {
         <div>
           <QRCode
             id='qrcode'
-            value='momo://app?action=payWithApp&isScanQR=true&serviceType=qr&sid=TU9NT3xhYmQzODk5Ni1hMTQ0LTRiYTEtYTI3MS00Mjc5YTg2NTZhYTQ&v=2.3'
+            value='momo://app?action=payWithApp&isScanQR=true&serviceType=qr&sid=TU9NT3wyYjkxNWExZS02OWI1LTQ2ZTQtOTgxNi1lZGU2M2M2ZTgzZTg&v=2.3'
             size={290}
             level={'H'}
             includeMargin={true}
